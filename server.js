@@ -9,14 +9,9 @@ const PORT = process.env.PORT || 3000;
 let todos = [
   {
     id: uuid(),
-    name: 'Taste htmx',
+    name: 'Sled push',
     done: true
   },
-  {
-    id: uuid(),
-    name: 'Buy a unicorn',
-    done: false
-  }
 ];
 
 const getItemsLeft = () => todos.filter(t => !t.done).length;

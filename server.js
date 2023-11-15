@@ -109,6 +109,20 @@ app.post('/todos/clear-completed', (req, res) => {
   res.send(markup);
 });
 
+app.get('/exercises/back', (req, res) => {
+  const { id } = req.params;
+  let template = pug.compileFile('views/components/exercise-card-back.pug');
+  let markup = template({ name: 'Sled push', done: true });
+  res.send(markup);
+});
+
+app.get('/exercises/front', (req, res) => {
+  const { id } = req.params;
+  let template = pug.compileFile('views/components/exercise-card-front.pug');
+  let markup = template({ name: 'Sled push', done: true });
+  res.send(markup);
+});
+
 app.listen(PORT);
 
 console.log('Listening on port: ' + PORT);

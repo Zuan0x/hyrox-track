@@ -39,7 +39,8 @@ html(lang='en')
         // Hidden if no completed items are left ↓
         button.clear-completed(hx-post="/todos/clear-completed", hx-target='#todo-list') Clear completed
     section.metrics
-        h2 Exercises
+        h2 PERSONAL BESTS
+        h2 EXERCISES
         div.metric-container
           each exercise in exercises
             include components/exercise-card-front

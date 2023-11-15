@@ -377,18 +377,38 @@ html .clear-completed:active {
 }
 
 .metrics h2 {
-	color: #ffed00;
-	font-size: 56px;
-	font-weight: 200;
-	color: #ffed00;
+	background-color: #ffed00;
+	color: #111;
+	font-size: 42px;
+	font-weight: 600;
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
+	padding: 20px 32px;
+	width: fit-content;
 }
 
 .metric-container {
 	display: flex;
     justify-content: space-around;
+}
+
+.metric-box-front {
+	background: url('../../images/hyrox-skierg.jpeg'); /*center/cover; /* Set the path to your image */
+    opacity: 0.4;
+	color: white;
+	padding: 8px 16px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 12px 4px;
+	cursor: pointer;
+	width: 200px;
+	height: 480px;
+}
+
+.metric-box-front:hover {
+	opacity: 1;
 }
 
 .metric-box {
@@ -401,6 +421,10 @@ html .clear-completed:active {
 	cursor: pointer;
 	width: 200px;
 	height: 480px;
+}
+
+.metric-box:hover {
+	opacity: 0.8;
 }
 
 .metric-box h3 {

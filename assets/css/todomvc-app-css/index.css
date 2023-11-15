@@ -24,14 +24,15 @@ button {
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background: #ffed00;
 	color: #111111;
 	min-width: 230px;
-	max-width: 550px;
+	max-width: 850px;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 300;
+	justify-content: center;
+	align-items: center;
 }
 
 :focus {
@@ -42,12 +43,26 @@ body {
 	display: none;
 }
 
+.header h1 {
+	position: absolute;
+	top: -140px;
+	width: 100%;
+	font-size: 80px;
+	font-weight: 200;
+	text-align: center;
+	color: #ffed00;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
 .todoapp {
 	background: #ffed00;
 	margin: 130px 0 40px 0;
 	position: relative;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+	max-width: 550px;
 }
 
 .todoapp form {
@@ -225,7 +240,7 @@ body {
 }
 
 .todo-list li.completed label {
-	color: #cdcdcd;
+	color: #4d4d4d;
 	text-decoration: line-through;
 }
 
@@ -359,6 +374,35 @@ html .clear-completed:active {
 
 .info a:hover {
 	text-decoration: underline;
+}
+
+.metrics h2 {
+	color: #ffed00;
+	font-size: 56px;
+	font-weight: 200;
+	color: #ffed00;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+.metric-container {
+	display: flex;
+    justify-content: space-around;
+}
+
+.metric-box {
+	background-color: #ffed00;
+	padding: 8px 16px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 12px 4px
+}
+
+.metric-box h3 {
+	font-size: 32px;
+	font-weight: 200;
 }
 
 /*

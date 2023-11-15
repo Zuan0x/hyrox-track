@@ -1,1 +1,3 @@
- <button hx-get="/exercises/front", hx-swap="outerHTML swap:1s">#{name}</button>
+button.metric-box.btn-link.text-decoration-none(id='like-' + exercise.id,type="button", hx-post="/exercises/" + exercise.id, hx-swap="outerHTML swap:1s")
+  h3 #{exercise.todo}
+  h4 #{exercise.description}

@@ -39,27 +39,10 @@ html(lang='en')
         // Hidden if no completed items are left ↓
         button.clear-completed(hx-post="/todos/clear-completed", hx-target='#todo-list') Clear completed
     section.metrics
-        h2 Exercises     
-        //- <h2 class="text-2xl font-extralight uppercase">Personal Bests</h2>
+        h2 Exercises
         div.metric-container
-          div.metric-box
-            h3 SkiErg
-            button.btn.btn-link.text-decoration-none(hx-get="/exercises/back", hx-swap="outerHTML swap:1s") Swap 
-          div.metric-box
-            h3 Sled Push
-          div.metric-box
-            h3 Sled Pull
-          div.metric-box
-            h3 Burpee Broad Jump
-        div.metric-container
-          div.metric-box
-            h3 Rowing
-          div.metric-box
-            h3 Farmers Carry
-          div.metric-box
-            h3 Sandbag Lunges
-          div.metric-box
-            h3 Wall Balls
+          each exercise in exercises
+            include components/exercise-card-front
     // Scripts here. Don't remove ↓
     //-script(src='node_modules/todomvc-common/base.js')
     //-script(src='js/app.js')

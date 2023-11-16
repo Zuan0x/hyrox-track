@@ -20,58 +20,76 @@ let exercises = [
     name: 'SkiErg',
     todo: '1000m SkiErg',
     description: "The first HYROX workout station is 1000m on the Ski Erg. This erg predominantly targets the arm, shoulder & core muscles, however when done efficiently, it also involves muscles in the lower body – making the Ski Erg a full body workout.",
-    flipped: false
+    flipped: false,
+    image: "https://www.thestables.ie/templates/yootheme/cache/53/img_0305-5388cc71.jpeg"
   },
   {
     id: "2",
     name: 'Sled Push',
     todo: "50m Sled Push 152kg",
     description: "The second workout station is 50m of Sled Push. This is one station you do not want to come unprepared for… so make sure you try it out at least once before your race and invest in some grippy shoes! This movement targets the lower body muscles, including the entire posterior chain, core & anterior thigh muscles in particular.",
-    flipped: false
+    flipped: false,
+    image: "https://womensfitness.co.uk/wp-content/uploads/sites/3/2022/10/2177592031.jpg?w=900"
   },
   {
     id: "3",
     name: 'Sled Pull',
     todo: "50m Sled Pull 103kg",
     description: "Get ready to use your glutes, back, biceps & the entire trunk during workout station three – 50m of Sled Pull.",
-    flipped: false
+    flipped: false,
+    image: "https://media.foodspring.com/magazine/public/uploads/2022/08/8106_20220226_095542_212535884_original.jpg"
+
   },
   {
     id: "4",
     name: 'Burpee Broad Jump',
     todo: "80m Burpee Broad Jump",
     description: "Born in 1939, the fourth workout station is a full body workout that is both loved and hated at the same time. Trying these for the first time may feel hard, but many of our regular athletes now consider this station to be one of their favourites!",
-    flipped: false
+    flipped: false,
+    image: "https://www.sgb365.de/media/images/6639_20210911_084239_203210664_socialmedia-large.jpg"
+
   },
   {
     id: "5",
     name: 'Rowing',
     todo: '1000m Row',
     description: "Station number five is the second ergometer in this fitness race. 1000m of rowing marks the beginning of the second half of your HYROX race.",
-    flipped: false
+    flipped: false,
+    image: "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2023/5/26/gbotaxc0jjd3lpq8obyc/hyrox-rowing"
   },
   {
     id: "6",
     name: 'Farmers Carry 2x24kg',
     todo: "200m Farmers Carry",
     description: "For 200m of Farmers Carry, engagement of your upper back muscles, core & grip strength is required. This workout station is easy to practise on your weekly shop…",
-    flipped: false
+    flipped: false,
+    image: "https://obstacleman.com/img/featured/hyroxLondonMay2022.jpg"
+
   },
   {
     id: "7",
     name: 'Sandbag Lunges',
     todo: '100m Sandbag Lunges 20kg',
     description: "10, 20 or 30 kilograms on your back whilst lunging? Welcome to workout station number seven. Primarily targets the thigh and glute muscles, this one is a burner…",
-    flipped: false
+    flipped: false,
+    image: "https://www.infront.sport/hubfs/Hyrox%20Manchester%20(267%20of%20399).jpg"
   },
   {
     id: "8",
     name: 'Wall Balls',
     todo: '100 Wall Balls 6kg',
     description: "The final station… Wall Balls. With the finish line in sight, it’s time to finish your race in style & join the #HYROXFAMILY.",
-    flipped: false
+    flipped: false,
+    image: "https://roxlyfe.com/wp-content/uploads/2022/07/images_8628_MIV1_05407-1.jpg"
+
   },
 ];
+
+let personalBests = [
+  {
+    exercise: 'SkiErg',
+  }
+]
 
 const getItemsLeft = () => todos.filter(t => !t.done).length;
 

@@ -1,2 +1,7 @@
-button.metric-box-front.btn-link.text-decoration-none(id='like-' + exercise.id,type="button", hx-post="/exercises/" + exercise.id, hx-swap="outerHTML swap:1s") 
+button.metric-box-front.btn-link.text-decoration-none(
+    id='like-' + exercise.id,type="button", 
+    hx-post="/exercises/" + exercise.id, 
+    hx-swap="outerHTML swap:1s", 
+    style=`background-image: url('${exercise.image}');`
+  ) 
   h3 #{exercise.name}

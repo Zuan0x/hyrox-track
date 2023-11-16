@@ -43,7 +43,8 @@ html(lang='en')
         h2 EXERCISES
         div.metric-container
           each exercise in exercises
-            include components/exercise-card-front
+            div(class='col-md-3' style='width: min-content')
+              include components/exercise-card-front
     // Scripts here. Don't remove ↓
     //-script(src='node_modules/todomvc-common/base.js')
     //-script(src='js/app.js')

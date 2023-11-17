@@ -1,0 +1,7 @@
+button.pb-box.btn-link.text-decoration-none(
+    id='like-' + pb.id,type="button", 
+    hx-post="/pbs/" + pb.id, 
+    hx-swap="outerHTML swap:1s", 
+    style=`background-color: ${selectedPB === pb.id? 'red' : 'yellow'}`
+  ) 
+  h3 #{pb.name}

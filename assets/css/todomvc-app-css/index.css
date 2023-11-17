@@ -412,6 +412,36 @@ html .clear-completed:active {
 	opacity: 1;
 }
 
+.pb-box {
+	background-color: #ffed00;
+	padding: 8px 16px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 12px 4px;
+	cursor: pointer;
+}
+
+.pb-tab {
+	/*background-color: #4d4d4d;*/
+	color: #FFF;
+	cursor: pointer;
+	padding: 4px 8px;
+}
+
+.pb-tab.selected {
+	background-color: aqua;
+}
+
+.pb-metrics {
+	background-color: #4d4d4d;
+	color: #ffed00;
+}
+
+.metric-box:hover {
+	opacity: 0.8;
+}
+
 .metric-box {
 	background-color: #ffed00;
 	padding: 8px 16px;

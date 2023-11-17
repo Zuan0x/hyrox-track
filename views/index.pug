@@ -40,6 +40,16 @@ html(lang='en')
         button.clear-completed(hx-post="/todos/clear-completed", hx-target='#todo-list') Clear completed
     section.metrics
         h2 PERSONAL BESTS
+        div(id="tabs" hx-target="#tab-contents" role="tablist" _="on htmx:afterOnLoad set @aria-selected of <[aria-selected=true]/> to false tell the target take .selected set @aria-selected to true")
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="true" hx-get="/pb/1" class="selected") SkiErg
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/2") Sled Push
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/3") Sled Pull
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/4") Burpee Broad Jump
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/5") Rowing
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/6") Farmers Carry
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/7") Sandbag Lunges
+          button.pb-tab(role="tab" aria-controls="tab-content" aria-selected="false" hx-get="/pb/8") Wall Ball
+        div.pb-metrics(id="tab-contents" role="tabpanel" hx-get="/pb/1" hx-trigger="load")
         h2 EXERCISES
         div.metric-container
           each exercise in exercises

@@ -85,9 +85,78 @@ let exercises = [
   },
 ];
 
+let selectedPB = "1"
+
 let personalBests = [
   {
+    id: "1",
     exercise: 'SkiErg',
+    metrics: {
+      time: '3:30',
+      distance: '1000m',
+      pace: '1:45',
+    }
+  },
+  {
+    id: "2",
+    exercise: 'Sled Push',
+    metrics: {
+      time: '1:30',
+      distance: '100m',
+      weight: '85kg',
+    }
+  },
+  {
+    id: "3",
+    exercise: 'Sled Pull',
+    metrics: {
+      time: '1:30',
+      distance: '100m',
+      weight: '65kg',
+    }
+  },
+  {
+    id: "4",
+    exercise: 'Burpee Broad Jump',
+    metrics: {
+      time: '2:30',
+      distance: '200m',
+    }
+  },
+  {
+    id: "5",
+    exercise: 'Rowing',
+    metrics: {
+      time: '2:30',
+      distance: '500m',
+    }
+  },
+  {
+    id: "6",
+    exercise: 'Farmers Carry',
+    metrics: {
+      time: '2:30',
+      distance: '200m',
+      weight: '20kg',
+    }
+  },
+  {
+    id: "7",
+    exercise: 'Sandbag Lunges',
+    metrics: {
+      time: '2:30',
+      distance: '200m',
+      weight: '20kg',
+    }
+  },
+  {
+    id: "8",
+    exercise: 'Wall Balls',
+    metrics: {
+      time: '2:30',
+      reps: '100',
+      weight: '6kg',
+    }
   }
 ]
 
@@ -118,7 +187,7 @@ app.get('/', (req, res) => {
       filteredTodos = todos;
   }
 
-  res.render('index', { todos: filteredTodos, filter, itemsLeft: getItemsLeft(), exercises });
+  res.render('index', { todos: filteredTodos, filter, itemsLeft: getItemsLeft(), exercises, personalBests, selectedPB });
 });
 
 app.post('/todos', (req, res) => {
@@ -194,6 +263,23 @@ app.post('/exercises/:id', (req, res) => {
   let template = exercise.flipped? pug.compileFile('views/components/exercise-card-back.pug') : pug.compileFile('views/components/exercise-card-front.pug');
   let markup = template({ exercise });
   res.send(markup);
+});
+
+app.post('/pbs/:id', (req, res) => {
+  const { id } = req.params;
+  const pb = personalBests.find(pb => pb.id === id);
+  selectedPB = id;
+  
+  let template = pug.compileFile('views/components/personal-bests-button.pug');
+  let markup = template({ pb, selectedPB });
+  res.send(markup);
+});
+
+app.get('/pb/:id', (req, res) => {
+  const { id } = req.params;
+
+  const pb = personalBests.find(pb => pb.id === id);
+  res.send(pb.metrics);
 });
 
 app.listen(PORT);
